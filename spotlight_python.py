@@ -26,7 +26,10 @@ i = 0
 length = len(photos)
 today = date.today().strftime("%m-%d-%Y")
 foldername = f"Spotlight_Pictures_{today}"
-os.mkdir(f"C:\\Users\\{home_directory}\\OneDrive\\Desktop\\Spotlight\\{foldername}")
+if not os.path.exists(f"C:\\Users\\{home_directory}\\OneDrive\\Desktop\\Spotlight"):
+    os.mkdir(f"C:\\Users\\{home_directory}\\OneDrive\\Desktop\\Spotlight")
+if not os.path.exists(f"C:\\Users\\{home_directory}\\OneDrive\\Desktop\\Spotlight\\{foldername}"):    
+    os.mkdir(f"C:\\Users\\{home_directory}\\OneDrive\\Desktop\\Spotlight\\{foldername}")
 print(foldername)
 while i < length:
     shutil.copy2(f"C:\\Users\\{home_directory}\\AppData\\Local\\Packages\\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\\LocalState\\Assets\\{photos[i]}",f"C:\\Users\\{home_directory}\\OneDrive\\Desktop\\Spotlight\\{foldername}\\{photos[i]}.jpg")
