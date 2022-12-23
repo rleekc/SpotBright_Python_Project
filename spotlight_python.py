@@ -35,12 +35,13 @@ while i < length:
     shutil.copy2(f"C:\\Users\\{home_directory}\\AppData\\Local\\Packages\\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\\LocalState\\Assets\\{photos[i]}",f"C:\\Users\\{home_directory}\\OneDrive\\Desktop\\Spotlight\\{foldername}\\{photos[i]}.jpg")
     i += 1
 
-""" 
+
 os.chdir(f"C:\\Users\\{home_directory}\\OneDrive\\Desktop\\Spotlight\\{foldername}")
 i = 0
 length = len(photos)
 while i < length:
-    image = Image.open(photos[i])
+    newphoto = photos[i]
+    image = Image.open(f"{newphoto}.jpg")
     exifdata = image.getexif()
     for tag_id in exifdata:
     # get the tag name, instead of human unreadable tag id
@@ -51,5 +52,5 @@ while i < length:
             data = data.decode()
         print(f"{tag:25}: {data}")
     i += 1
-  """
+
 
