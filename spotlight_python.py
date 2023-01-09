@@ -4,10 +4,8 @@ from datetime import date
 import cv2
 import re
 
-#change C:\\User\\newrl to C:\\Users\\$your_directory
-home_directory = os.getlogin()
-
 #find microsoft windows content delivery manager folder
+home_directory = os.getlogin()
 content_folders = os.listdir(f"C:\\Users\\{home_directory}\\AppData\\Local\\Packages")
 pattern = re.compile(r"Microsoft\.Windows\.ContentDeliveryManager_([a-zA-Z]+(\d[a-zA-Z]+)+)", re.IGNORECASE)
 for content_folder in content_folders:
