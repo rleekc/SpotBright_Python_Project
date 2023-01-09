@@ -2,7 +2,7 @@
 import cv2
   
 # get image
-filepath = "C:\\Users\\newrl\\OneDrive\\Desktop\\Spotlight\\Spotlight_Pictures_01-09-2023\\eab6c342f236f06993ea8a43eeac8083d274e56153f9772a30201364d437f605.jpg"
+filepath = "C:\\Users\\newrl\\OneDrive\\Desktop\\Spotlight\\Spotlight_Pictures_08-12-2022\\178764b5981a2aee4c1fc7d893b8a2d95269220d41eede955e9c867ff12350d5.jpg"
 image = cv2.imread(filepath)
 #print(image.shape)
   
