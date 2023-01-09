@@ -5,7 +5,7 @@ import cv2
 import re
 
 #change C:\\User\\newrl to C:\\Users\\$your_directory
-home_directory = "newrl"
+home_directory = os.getlogin()
 
 #find microsoft windows content delivery manager folder
 content_folders = os.listdir(f"C:\\Users\\{home_directory}\\AppData\\Local\\Packages")
