@@ -61,5 +61,5 @@ while i < length:
     height, width = image.shape[:2]
     if width == 1920:
         shutil.copy2(f"C:\\Users\\{home_directory}\\AppData\\Local\\Packages\\{cdm_folder}\\LocalState\\Assets\\{photos[i]}",f"C:\\Users\\{home_directory}\\OneDrive\\Desktop\\Spotlight\\_Landscape_Photos\\_Landscape_{foldername}\\{photos[i]}.jpg")
-        shutil.copy2(f"C:\\Users\\{home_directory}\\OneDrive\\Pictures\\SpotBright\\{photos[i]}.jpg")
+        shutil.copy2(f"C:\\Users\\{home_directory}\\AppData\\Local\\Packages\\{cdm_folder}\\LocalState\\Assets\\{photos[i]}",f"C:\\Users\\{home_directory}\\OneDrive\\Pictures\\SpotBright\\{photos[i]}.jpg")
     i += 1
