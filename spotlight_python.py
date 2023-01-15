@@ -48,6 +48,10 @@ if not os.path.exists(f"C:\\Users\\{home_directory}\\OneDrive\\Desktop\\Spotligh
 if not os.path.exists(f"C:\\Users\\{home_directory}\\OneDrive\\Desktop\\Spotlight\\_Landscape_Photos\\_Landscape_{foldername}"):    
     os.mkdir(f"C:\\Users\\{home_directory}\\OneDrive\\Desktop\\Spotlight\\_Landscape_Photos\\_Landscape_{foldername}")
 
+#creates folder in pictures
+if not os.path.exists(f"C:\\Users\\{home_directory}\\OneDrive\\Pictures\\SpotBright"):    
+    os.mkdir(f"C:\\Users\\{home_directory}\\OneDrive\\Pictures\\SpotBright")
+
 #copy only landscape photos to _Landscape_Photos
 i = 0
 length = len(photos)
@@ -57,4 +61,5 @@ while i < length:
     height, width = image.shape[:2]
     if width == 1920:
         shutil.copy2(f"C:\\Users\\{home_directory}\\AppData\\Local\\Packages\\{cdm_folder}\\LocalState\\Assets\\{photos[i]}",f"C:\\Users\\{home_directory}\\OneDrive\\Desktop\\Spotlight\\_Landscape_Photos\\_Landscape_{foldername}\\{photos[i]}.jpg")
+        shutil.copy2(f"C:\\Users\\{home_directory}\\OneDrive\\Pictures\\SpotBright\\{photos[i]}.jpg")
     i += 1
